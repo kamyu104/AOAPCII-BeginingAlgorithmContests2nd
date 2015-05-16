@@ -16,7 +16,6 @@ double AtomicWeightOf(char atom) {
     return 14.01;
 }
 
-
 int main() {
     int t;
     string formula;
@@ -27,6 +26,7 @@ int main() {
         int j = 0;
         
         while (j < formula.length()) {
+            // Parse the number of the atom.
             string temp_str = "0";
             int temp_index = j + 1;
             while (temp_index < formula.length() && isdigit(formula[temp_index])) {
@@ -35,7 +35,6 @@ int main() {
             }
             
             double multiplier = atof(temp_str.c_str());
-            
             if (multiplier == 0.0) {
                 multiplier = 1.0;
             }
