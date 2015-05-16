@@ -3,12 +3,18 @@
 #include <cmath>
 #include <cstdio>
 #include <sstream>
+#include <unordered_map>
+#include <tuple>
 using namespace std;
 
+struct HashPair {
+    size_t operator()(const pair<double, int>& p) const {
+        return hash<double>()(p.first) ^ hash<int>()(p.second);
+    }
+};
+
 int main() {
-    double M[10][31];
-    long long int E[10][31];
-    
+    unordered_map<pair<double, int>, pair<int,int>, HashPair> map;
     // Build up the mapping table from "a * 2^b" to "c * 10^d"
     for (int i = 0; i <= 9; ++i) {
         for (int j = 1; j <= 30; ++j) {
@@ -20,8 +26,7 @@ int main() {
             double x = log10(a) + b * log10(2);
             int d = floor(x);
             double c = pow(10, x - d);
-            M[i][j] = c;
-            E[i][j] = d;
+            map[make_pair(c, d)] = make_pair(i, j);
         }
     }
     
@@ -34,11 +39,12 @@ int main() {
         int q;
         ss >> p >> q;
         // Lookup the mapping table from "c * 10^d" to
-        for (int i = 0; i < 10; ++i) {
-            for (int j = 1; j <= 30; ++j) {
-                if (fabs(M[i][j] - p) < 1e-4 && E[i][j] == q) {
-                    cout << i << ' ' << j << endl;
-                }
+        for (const auto& pv : map) {
+            pair<double, int> key;
+            pair<int, int> val;
+            tie(key, val) = pv;
+            if (fabs(key.first - p) < 1e-4 && key.second == q) {
+                cout << val.first << ' ' << val.second << endl;
             }
         }
     }
