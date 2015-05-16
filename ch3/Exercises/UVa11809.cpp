@@ -1,7 +1,6 @@
 // UVa11809 Floating-Point Numbers
 #include <iostream>
 #include <cmath>
-#include <cstdio>
 #include <sstream>
 #include <unordered_map>
 #include <tuple>
