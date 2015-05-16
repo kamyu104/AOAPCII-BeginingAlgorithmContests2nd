@@ -1,4 +1,5 @@
 // UVa11809 Floating-Point Numbers
+
 #include <iostream>
 #include <cmath>
 #include <sstream>
