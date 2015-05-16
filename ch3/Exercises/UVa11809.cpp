@@ -15,7 +15,7 @@ struct HashPair {
 
 int main() {
     unordered_map<pair<double, int>, pair<int,int>, HashPair> map;
-    // Build up the mapping table from "a * 2^b" to "c * 10^d"
+    // Build up the mapping table from "c * 10^d" to "a * 2^b"
     for (int i = 0; i <= 9; ++i) {
         for (int j = 1; j <= 30; ++j) {
             double a = 1 - pow(2, -(i + 1)); // max mantissa = 1 - 2^(-i-1)
@@ -38,7 +38,7 @@ int main() {
         double p;
         int q;
         ss >> p >> q;
-        // Lookup the mapping table from "c * 10^d" to
+        // Lookup the mapping table from "c * 10^d" to "a * 2^b"
         for (const auto& kv : map) {
             pair<double, int> key;
             pair<int, int> val;
