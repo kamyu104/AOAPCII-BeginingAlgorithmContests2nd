@@ -6,14 +6,20 @@
 using namespace std;
 
 double AtomicWeightOf(char atom) {
-    if (atom == 'C') {
-        return 12.01;
-    } else if (atom == 'H') {
-        return 1.008;
-    } else if (atom == 'O') {
-        return 16.00;
+    switch (atom) {
+        case 'C':
+            return 12.01;
+            break;
+        case 'H':
+            return 1.008;
+            break;
+        case 'O':
+            return 16.00;
+            break;
+        default:
+            return 14.01;
+            break;
     }
-    return 14.01;
 }
 
 int main() {
