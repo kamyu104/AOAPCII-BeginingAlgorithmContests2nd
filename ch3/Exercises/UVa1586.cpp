@@ -17,8 +17,7 @@ double AtomicWeightOf(char atom) {
 }
 
 
-int main ()
-{
+int main() {
     int t;
     string formula;
     cin >> t;
@@ -48,4 +47,5 @@ int main ()
         cout.precision(3);
         cout << result << endl;
     }
+    return 0;
 }
