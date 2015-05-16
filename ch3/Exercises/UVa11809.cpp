@@ -38,10 +38,10 @@ int main() {
         int q;
         ss >> p >> q;
         // Lookup the mapping table from "c * 10^d" to
-        for (const auto& pv : map) {
+        for (const auto& kv : map) {
             pair<double, int> key;
             pair<int, int> val;
-            tie(key, val) = pv;
+            tie(key, val) = kv;
             if (fabs(key.first - p) < 1e-4 && key.second == q) {
                 cout << val.first << ' ' << val.second << endl;
             }
