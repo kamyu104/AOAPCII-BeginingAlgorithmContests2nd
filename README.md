@@ -1,1 +1,3 @@
-# AOAPCII-BeginingAlgorithmContests
+# AOAPCII-BeginingAlgorithmContests2nd
+
+Solutions of Excercises.
