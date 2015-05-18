@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+
 using namespace std;
 
 double AtomicWeightOf(char atom) {
