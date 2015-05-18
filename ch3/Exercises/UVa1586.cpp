@@ -1,4 +1,6 @@
 // UVa1586 - Molar Mass
+// Time:  O(n)
+// Space: O(1)
 
 #include <iostream>
 #include <string>
