@@ -46,7 +46,7 @@ int main() {
                 auto jt = it;
                 ++jt;
                 for (; is_ok && jt != edge.cend(); ++jt) {
-                    if (area.find(make_pair(*it, *jt)) == area.cend()) { // Some of (w, h) does exist.
+                    if (area.find(make_pair(*it, *jt)) == area.cend()) { // Some of (w, h) does not exist.
                         is_ok = false;
                     }
                 }
