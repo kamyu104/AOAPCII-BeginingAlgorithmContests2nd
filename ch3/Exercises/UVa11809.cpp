@@ -1,4 +1,6 @@
 // UVa11809 Floating-Point Numbers
+// Time:  O(M * E) for building map, O(1) per test case
+// Space: O(M * E) for map
 
 #include <iostream>
 #include <cmath>
