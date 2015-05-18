@@ -25,18 +25,19 @@ double AtomicWeightOf(char atom) {
 }
 
 int main() {
-    int t;
-    string formula;
-    cin >> t;
-    for (int i = 0; i < t; i++) {
+    int T;
+    cin >> T;
+    
+    while (T--) {
+        string formula;
         cin >> formula;
-        double result = 0;
-        int j = 0;
         
-        while (j < formula.length()) {
+        double result = 0;
+        int i = 0;
+        while (i < formula.length()) {
             // Parse the number of the atom.
             string temp_str = "0";
-            int temp_index = j + 1;
+            int temp_index = i + 1;
             while (temp_index < formula.length() && isdigit(formula[temp_index])) {
                 temp_str.append(1, formula[temp_index]);
                 ++temp_index;
@@ -46,9 +47,9 @@ int main() {
             if (multiplier == 0.0) {
                 multiplier = 1.0;
             }
-            result += multiplier * AtomicWeightOf(formula[j]);
+            result += multiplier * AtomicWeightOf(formula[i]);
             
-            j = temp_index;
+            i = temp_index;
         }
         cout.setf(ios::fixed,ios::floatfield);
         cout.precision(3);
