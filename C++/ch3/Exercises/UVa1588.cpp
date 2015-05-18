@@ -18,7 +18,7 @@ bool IsValid(int k, const string& s1, const string& s2){
 
 size_t Cut(const string& s1, const string& s2){
     int k = 0;
-    while (!IsValid(k,s1,s2)) {
+    while (!IsValid(k, s1, s2)) {
         ++k;
     }
     return max(s1.length(), s2.length() + k);
