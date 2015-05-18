@@ -3,7 +3,7 @@
 // Space: O(1)
 
 #include <iostream>
-#include <set>
+#include <unordered_set>
 #include <unordered_map>
 #include <algorithm>
 
@@ -18,7 +18,7 @@ struct HashPair {
 int main() {
     int w, h;
     while (cin >> w >> h) {
-        set<int> edge;
+        unordered_set<int> edge;
         unordered_map<pair<int, int>, int, HashPair> area;
         if (w > h) {
             swap(w, h);
@@ -37,16 +37,19 @@ int main() {
         }
         
         bool is_ok = false;
+        
         // Make sure all of (w, h) has pairs and at most 3 different lengths of w, h, l.
-        if (all_of(area.cbegin(), area.cend(), [](const pair<pair<int, int>, int>& i){ return i.second % 2 == 0; }) &&
+        if (all_of(area.cbegin(), area.cend(), [](const pair<pair<int, int>, int>& p){ return p.second % 2 == 0; }) &&
             edge.size() <= 3) {
             is_ok = true;
+            
             // Make sure all pairs of l, w, h exist.
             for (auto it = edge.cbegin(); is_ok && it != edge.cend(); ++it) {
                 auto jt = it;
                 ++jt;
                 for (; is_ok && jt != edge.cend(); ++jt) {
-                    if (area.find(make_pair(*it, *jt)) == area.cend()) { // Some of (w, h) does not exist.
+                    if (area.find(make_pair(*it, *jt)) == area.cend() &&
+                        area.find(make_pair(*jt, *it)) == area.cend()) { // Some of (w, h) does not exist.
                         is_ok = false;
                     }
                 }
@@ -59,5 +62,6 @@ int main() {
             cout << "IMPOSSIBLE" << endl;
         }
     }
+    
     return 0;
 }
