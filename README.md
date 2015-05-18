@@ -2,7 +2,7 @@
 
 Solutions of Excercises.
 
-* [CH3 Arrays and Strings](https://github.com/kamyu104/arrays-and-strings)
+* [CH3 Arrays and Strings](https://github.com/kamyu104/AOAPCII-BeginingAlgorithmContests2nd#arrays-and-strings)
 
 ---
 
