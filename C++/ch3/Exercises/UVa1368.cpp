@@ -43,9 +43,11 @@ int main() {
         for (int i = 0; i < DNAs.size(); ++i) {
             cin >> DNAs[i];
         }
+        
         string consensus_string(n, 'A');
         int error_count = 0;
         ConsensusString(DNAs, consensus_string, error_count);
+        
         cout << consensus_string << endl;
         cout << error_count << endl;
     }
