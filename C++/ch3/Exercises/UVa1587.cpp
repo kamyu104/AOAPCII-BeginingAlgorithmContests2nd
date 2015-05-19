@@ -15,27 +15,7 @@ struct HashPair {
     }
 };
 
-int main() {
-    int w, h;
-    while (cin >> w >> h) {
-        unordered_set<int> edge;
-        unordered_map<pair<int, int>, int, HashPair> area;
-        if (w > h) {
-            swap(w, h);
-        }
-        edge.insert(w), edge.insert(h);
-        ++area[make_pair(w, h)];
-        
-        int count = 5;
-        while (count--) {
-            cin >> w >> h;
-            if (w > h) {
-                swap(w, h);
-            }
-            edge.insert(w), edge.insert(h);
-            ++area[make_pair(w, h)];
-        }
-        
+void CheckBox(unordered_set<int>& edge, unordered_map<pair<int, int>, int, HashPair>& area) {
         bool is_ok = false;
         
         // Make sure all of (w, h) has pairs and at most 3 different lengths of w, h, l.
@@ -61,6 +41,27 @@ int main() {
         } else {
             cout << "IMPOSSIBLE" << endl;
         }
+}
+
+int main() {
+    int w, h;
+    while (cin >> w >> h) {
+        unordered_set<int> edge;
+        unordered_map<pair<int, int>, int, HashPair> area;
+        int count = 0;
+        do {
+            if (w > h) {
+                swap(w, h);
+            }
+            edge.insert(w), edge.insert(h);
+            ++area[make_pair(w, h)];
+            
+            if (++count == 6) {
+                break;
+            }
+        } while(cin >> w >> h);
+        
+        CheckBox(edge, area);
     }
     
     return 0;
