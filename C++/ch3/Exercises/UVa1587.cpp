@@ -63,7 +63,7 @@ int main() {
             if (++count == 6) {
                 break;
             }
-        } while(cin >> w >> h);
+        } while (cin >> w >> h);
         
         CheckBox(area, edge);
     }
