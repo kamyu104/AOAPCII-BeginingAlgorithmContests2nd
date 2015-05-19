@@ -11,7 +11,7 @@ int main() {
     string s, t;
     while (cin >> s >> t) {
         int i, j;
-        for (i = 0, j = 0 ; i < t.length() && j < s.length() ; ++i ) {
+        for (i = 0, j = 0; i < t.length() && j < s.length(); ++i ) {
             if (t[i] == s[j]) {
                 ++j;
             }
