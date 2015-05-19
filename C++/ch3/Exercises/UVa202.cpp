@@ -15,6 +15,8 @@ int main() {
     while (cin >> a >> b) {
         unordered_map<int, int> remainder_index;
         vector<int> decimal_digits;
+        
+        // Count the decimals part.
         int index = 0;
         int result = a / b;
         int remainder = a % b;
@@ -25,7 +27,7 @@ int main() {
             remainder = (remainder * 10) % b;
         }
         
-        // Print out the integer.
+        // Print out the integer part.
         cout <<  a << "/" << b << " = " << a / b << ".";
         
         // Print out the decimals.
@@ -44,6 +46,7 @@ int main() {
         }
         cout << ")" << endl;
         
+        // Print out number of digits in repeating cycle.
         cout << "   " << index - cycle_start_index
              << " = number of digits in repeating cycle" << endl << endl;
     }
