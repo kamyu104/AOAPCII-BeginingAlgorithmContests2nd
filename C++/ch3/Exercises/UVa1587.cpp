@@ -52,18 +52,14 @@ int main() {
         unordered_map<pair<int, int>, int, HashPair> area;
         unordered_set<int> edge;
         
-        int count = 0;
+        int count = 6;
         do {
             if (w > h) {
                 swap(w, h);
             }
             ++area[make_pair(w, h)];
             edge.insert(w), edge.insert(h);
-            
-            if (++count == 6) {
-                break;
-            }
-        } while (cin >> w >> h);
+        } while (--count && cin >> w >> h);
         
         CheckBox(area, edge);
     }
