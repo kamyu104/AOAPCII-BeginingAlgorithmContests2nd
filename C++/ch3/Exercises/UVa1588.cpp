@@ -20,7 +20,6 @@ using std::string;
 using std::max;
 using std::min;
 
-
 bool IsValid(const int k, const string& s1, const string& s2) {
     for (int i = 0; k + i < s1.length() && i < s2.length(); ++i) {
         if ((s1[k + i] - '0') + (s2[i] - '0') > 3) {
