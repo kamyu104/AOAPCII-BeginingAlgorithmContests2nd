@@ -4,8 +4,8 @@
  * UVa232 - Crossword Answers
  * http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=168
  *
- * Time  : O(m * n)
- * Space : O(n)
+ * Time  : O(r * c)
+ * Space : O(c)
  *
  */
 
