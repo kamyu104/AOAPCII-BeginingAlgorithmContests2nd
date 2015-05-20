@@ -80,7 +80,7 @@ int main() {
     int r, c;
     
     while (cin >> r >> c) {
-        vector<string> crossword(r, string());
+        vector<string> crossword(r, "");
         for (int i = 0; i < crossword.size(); ++i) {
             cin >> crossword[i];
         }
