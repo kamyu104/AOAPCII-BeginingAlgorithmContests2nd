@@ -1,15 +1,27 @@
-// UVa232 - Crossword Answers
-// Time:  O(m * n)
-// Space: O(n)
+// Copyright (c) 2015 kamyu. All rights reserved.
+
+/*
+ * UVa232 - Crossword Answers
+ * http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=168
+ *
+ * Time  : O(m * n)
+ * Space : O(n)
+ *
+ */
 
 #include <iostream>
 #include <iomanip>
 #include <string>
 #include <vector>
 
-using namespace std;
+using std::vector;
+using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::setw;
 
-void PrintAcross(vector<string> &crossword) {
+void PrintAcross(const vector<string> &crossword) {
     cout << "Across" << endl;
     int count = 0;
     for (int i = 0; i < crossword.size(); ++i) {
@@ -20,11 +32,12 @@ void PrintAcross(vector<string> &crossword) {
                     j - 1 < 0 || crossword[i][j - 1] == '*') {
                     ++count;
                 }
-                
+
                 int numbering = count;
                 string answer;
                 answer.push_back(crossword[i][j++]);
-                while (j < crossword[i].length() && crossword[i][j] != '*') { //Across.
+                // Across.
+                while (j < crossword[i].length() && crossword[i][j] != '*') {
                     if (i - 1 < 0 || crossword[i - 1][j] == '*' ||
                         j - 1 < 0 || crossword[i][j - 1] == '*') {
                         ++count;
@@ -38,9 +51,10 @@ void PrintAcross(vector<string> &crossword) {
     }
 }
 
-void PrintDown(vector<string> &crossword) {
+void PrintDown(const vector<string> &crossword) {
     cout << "Down" << endl;
-    // valid_index[j] denoted as foreah i >= valid_index[j], the square crossword[i][j] is unused.
+    // valid_index[j] denoted as foreah i >= valid_index[j],
+    // the square crossword[i][j] is unused.
     vector<int> valid_index(crossword[0].length(), 0);
     int count = 0;
     for (int i = 0; i < crossword.size(); ++i) {
@@ -51,14 +65,15 @@ void PrintDown(vector<string> &crossword) {
                     j - 1 < 0 || crossword[i][j - 1] == '*') {
                     ++count;
                 }
-                
+
                 // The square crossword[i][j] is unused.
                 if (i >= valid_index[j]) {
                     int numbering = count;
                     string answer;
                     int k = i;
                     answer.push_back(crossword[k++][j]);
-                    while (k < crossword.size() && crossword[k][j] != '*') { // Down.
+                    // Down.
+                    while (k < crossword.size() && crossword[k][j] != '*') {
                         answer.push_back(crossword[k++][j]);
                     }
                     valid_index[j] = k;
@@ -70,7 +85,7 @@ void PrintDown(vector<string> &crossword) {
     }
 }
 
-void PrintAnswers(vector<string> &crossword) {
+void PrintAnswers(const vector<string> &crossword) {
     PrintAcross(crossword);
     PrintDown(crossword);
 }
@@ -78,7 +93,7 @@ void PrintAnswers(vector<string> &crossword) {
 int main() {
     int T = 0;
     int r, c;
-    
+
     while (cin >> r >> c) {
         vector<string> crossword(r, "");
         for (int i = 0; i < crossword.size(); ++i) {
@@ -90,6 +105,6 @@ int main() {
         cout << "puzzle #" << T << ":" << endl;
         PrintAnswers(crossword);
     }
-    
+
     return 0;
 }
