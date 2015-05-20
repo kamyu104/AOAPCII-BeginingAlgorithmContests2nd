@@ -25,6 +25,7 @@ void PrintAcross(const vector<string> &crossword) {
     cout << "Across" << endl;
     int count = 0;
     for (int i = 0; i < crossword.size(); ++i) {
+        int valid_index = 0;
         for (int j = 0; j < crossword[i].length(); ++j) {
             if (crossword[i][j] != '*') {
                 // numbering increases near the border or '*'
@@ -33,19 +34,21 @@ void PrintAcross(const vector<string> &crossword) {
                     ++count;
                 }
 
-                int numbering = count;
-                string answer;
-                answer.push_back(crossword[i][j++]);
-                // Across.
-                while (j < crossword[i].length() && crossword[i][j] != '*') {
-                    if (i - 1 < 0 || crossword[i - 1][j] == '*' ||
-                        j - 1 < 0 || crossword[i][j - 1] == '*') {
-                        ++count;
+                // The square crossword[i][j] is unused.
+                if (j >= valid_index) {
+                    int numbering = count;
+                    string answer;
+                    int k = j;
+                    answer.push_back(crossword[i][k++]);
+                    // Down.
+                    while (k < crossword[i].length() &&
+                           crossword[i][k] != '*') {
+                        answer.push_back(crossword[i][k++]);
                     }
-                    answer.push_back(crossword[i][j++]);
+                    valid_index = k;
+                    cout << setw(3) << numbering << "."
+                         << answer << endl;
                 }
-                cout << setw(3) << numbering << "."
-                     << answer << endl;
             }
         }
     }
