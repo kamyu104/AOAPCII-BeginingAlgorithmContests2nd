@@ -1,11 +1,21 @@
-// UVa10340 - All in All
-// Time:  O(m), m is length of t.
-// Space: O(1)
+// Copyright (c) 2015 kamyu. All rights reserved.
+
+/*
+ * UVa10340 - All in All
+ * http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1281
+ *
+ * Time  : O(m), m is length of t.
+ * Space : O(1)
+ *
+ */
 
 #include <iostream>
 #include <string>
 
-using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::string;
 
 int main() {
     string s, t;
@@ -16,7 +26,7 @@ int main() {
                 ++j;
             }
         }
-        
+
         if (j == s.length()) {
             cout << "Yes" << endl;
         } else {
