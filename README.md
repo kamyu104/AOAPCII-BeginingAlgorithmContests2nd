@@ -11,6 +11,7 @@ Solutions of Exercises.
 |---| ----- | -------- | ---- | ----- | ---------- | ---- |
 |3-1|[Score](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4460)| [C++](./C++/ch3/Exercises/UVa1585.cpp)| _O(n)_ | _O(1)_ | Easy | |
 |3-2|[Molar mass](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=830&page=show_problem&problem=4461)| [C++](./C++/ch3/Exercises/UVa1586.cpp)| _O(n)_ | _O(1)_ | Easy | |
+|3-4|[Periodic Strings](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=396)| [C++](./C++/ch3/Exercises/UVa455.cpp)| _O(n * f)_ | _O(1)_ | Easy | Simulate |
 |3-5|[Puzzle](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=163)| [C++](./C++/ch3/Exercises/UVa277.cpp)| _O(m)_ | _O(1)_ | Easy | Simulate |
 |3-6|[Crossword Answers](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=168)| [C++](./C++/ch3/Exercises/UVa232.cpp)| _O(r * c)_ | _O(c)_ | Easy | Simulate |
 |3-7|[DNA Consensus String](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4114)| [C++](./C++/ch3/Exercises/UVa1368.cpp)| _O(m * n)_ | _O(1)_ | Easy | |

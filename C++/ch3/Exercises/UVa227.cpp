@@ -10,9 +10,9 @@
  */
 
 #include <iostream>
-#include <unordered_map>
 #include <string>
 #include <vector>
+#include <unordered_map>
 #include <utility>
 #include <iterator>
 #include <algorithm>
@@ -20,9 +20,9 @@
 using std::cin;
 using std::cout;
 using std::endl;
-using std::unordered_map;
 using std::string;
 using std::vector;
+using std::unordered_map;
 using std::pair;
 using std::make_pair;
 using std::ostream_iterator;
