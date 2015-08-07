@@ -3,7 +3,6 @@
 /*
  * UVa11809 Floating-Point Numbers
  * http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=830&page=show_problem&problem=2909
-
  *
  * Time  : O(M * E) for building map, O(1) per test case
  * Space : O(M * E) for map
