@@ -1,6 +1,6 @@
 # AOAPCII-BeginingAlgorithmContests2nd
 
-Solutions of Exercises.
+C++ 11 Solutions of Exercises.
 
 * [Arrays and Strings](https://github.com/kamyu104/AOAPCII-BeginingAlgorithmContests2nd#arrays-and-strings)
 
