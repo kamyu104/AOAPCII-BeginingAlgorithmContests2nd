@@ -1,7 +1,7 @@
 # AOAPCII-BeginingAlgorithmContests2nd
 
 ![Language](https://img.shields.io/badge/language-C++%2011%20-orange.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kamyu104/AOAPCII-BeginingAlgorithmContests2nd/blob/master/LICENSE.md)
 
 C++ 11 Solutions of Exercises.
 
