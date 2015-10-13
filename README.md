@@ -7,9 +7,7 @@ C++ 11 Solutions of Exercises.
 
 * [Arrays and Strings](https://github.com/kamyu104/AOAPCII-BeginingAlgorithmContests2nd#arrays-and-strings)
 
----
-
-##Arrays and Strings
+## Arrays and Strings
 | # | Title | Solution | Time | Space | Difficulty | Note |
 |---| ----- | -------- | ---- | ----- | ---------- | ---- |
 |3-1|[Score](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4460)| [C++](./ch3/Exercises/UVa1585.cpp)| _O(n)_ | _O(1)_ | Easy | |
