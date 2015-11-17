@@ -6,6 +6,7 @@
 C++ 11 Solutions of Exercises.
 
 * [Arrays and Strings](https://github.com/kamyu104/AOAPCII-BeginingAlgorithmContests2nd#arrays-and-strings)
+* [Functions and Recursion](https://github.com/kamyu104/AOAPCII-BeginingAlgorithmContests2nd#functions-and-recursion)
 
 ## Arrays and Strings
 | # | Title | Solution | Time | Space | Difficulty | Note |
@@ -22,3 +23,7 @@ C++ 11 Solutions of Exercises.
 |3-10|[Box](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=830&page=show_problem&problem=4462)| [C++](./ch3/Exercises/UVa1587.cpp)| _O(1)_ | _O(1)_ | Easy | |
 |3-11|[Kickdown](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=830&page=show_problem&problem=4463)| [C++](./ch3/Exercises/UVa1588.cpp)| _O(m * n)_ | _O(1)_ | Easy | |
 |3-12|[Floating-Point Numbers](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=830&page=show_problem&problem=2909)| [C++](./ch3/Exercises/UVa11809.cpp)| _O(M * E)_ | _O(M * E)_ | Easy | Hash |
+
+## Functions and Recursion
+| # | Title | Solution | Time | Space | Difficulty | Note |
+|---| ----- | -------- | ---- | ----- | ---------- | ---- |
