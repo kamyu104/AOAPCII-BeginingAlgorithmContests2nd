@@ -84,10 +84,11 @@ bool C(const vector<vector<char>>& board, const int r, const int c,
 
 bool H(const vector<vector<char>>& board, const int r, const int c,
        const int x, const int y) {
-    for (int i = 0; i < 8; ++i) {
-        int x1 = x + Hdir[i][0], y1 = y + Hdir[i][1];
+    for (const auto& d : Hdir) {
+        int x1 = x + d[0], y1 = y + d[1];
+        int x2 = x + d[2], y2 = y + d[3];
         if (x1 == r && y1 == c &&
-            cnt_of_blocks(board, x, y, x + Hdir[i][2], y + Hdir[i][3]) == 0)  {
+            cnt_of_blocks(board, x, y, x2, y2) == 0)  {
             return true;
         }
     }
@@ -129,8 +130,8 @@ int main() {
             continue;
         }
         bool pieces_win = true;
-        for (int i = 0; i < 4; ++i) {
-            int r1 = r0 + dir[i][0], c1 = c0 + dir[i][1];
+        for (const auto& d : dir) {
+            int r1 = r0 + d[0], c1 = c0 + d[1];
             if (in_black_palace(r1, c1) &&
                 !check_red_win(pieces, board, r1, c1)) {
                 pieces_win = false;
