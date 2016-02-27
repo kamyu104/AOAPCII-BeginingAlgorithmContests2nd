@@ -117,10 +117,10 @@ int main() {
         for (int i = 0; i < N; ++i) {
             Piece p;
             cin >> p.type >> p.r >> p.c;
+            board[p.r][p.c] = p.type;
             if (p.type == 'G') {
                 G_r = p.r, G_c = p.c;
             } else {
-                board[p.r][p.c] = p.type;
                 pieces.emplace_back(p);
             }
         }
