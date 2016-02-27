@@ -40,7 +40,7 @@ inline bool in_black_palace(const int r, const int c) {
 }
 
 int cnt_of_blocks(const vector<vector<char>>& board,
-                                    int r1, int c1, int r2, int c2) {
+                  int r1, int c1, int r2, int c2) {
     int cnt = 0;
     if (r1 != r2 && c1 != c2) {
         return -1;
@@ -95,8 +95,8 @@ bool H(const vector<vector<char>>& board, const int r, const int c,
 }
 
 bool check_red_win(const vector<Piece>& pieces,
-                      const vector<vector<char>>& board,
-                      const int r, const int c) {
+                   const vector<vector<char>>& board,
+                   const int r, const int c) {
     for (const auto& p : pieces) {
         if (!(p.r == r && p.c == c)) {
             if ((p.type == 'G' && G(board, r, c, p.r, p.c)) ||
