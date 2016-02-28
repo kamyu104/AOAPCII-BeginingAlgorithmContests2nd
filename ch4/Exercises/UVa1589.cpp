@@ -120,9 +120,8 @@ int main() {
             board[p.r][p.c] = p.type;
             if (p.type == 'G') {
                 G_r = p.r, G_c = p.c;
-            } else {
-                pieces.emplace_back(p);
             }
+            pieces.emplace_back(p);
         }
         if (G(board, r0, c0, G_r, G_c)) {
             cout << "NO" << endl;
