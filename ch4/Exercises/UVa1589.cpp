@@ -99,31 +99,33 @@ bool check_red_win(const vector<Piece>& pieces,
                    const vector<vector<char>>& board,
                    const int r, const int c) {
     for (const auto& p : pieces) {
-        if ((p.type == 'G' && G(board, r, c, p.r, p.c)) ||
-            (p.type == 'R' && R(board, r, c, p.r, p.c)) ||
-            (p.type == 'C' && C(board, r, c, p.r, p.c)) ||
-            (p.type == 'H' && H(board, r, c, p.r, p.c))) {
-            return true;
+        if (!(p.r == r && p.c == c)) {
+            if ((p.type == 'G' && G(board, r, c, p.r, p.c)) ||
+                (p.type == 'R' && R(board, r, c, p.r, p.c)) ||
+                (p.type == 'C' && C(board, r, c, p.r, p.c)) ||
+                (p.type == 'H' && H(board, r, c, p.r, p.c))) {
+                return true;
+            }
         }
     }
     return false;
 }
 
 int main() {
-    int N, r0, c0, G_r, G_c;
+    int N, r0, c0, G_idx;
     while ((cin >> N >> r0 >> c0) && (N != 0)) {
         vector<Piece> pieces;
         vector<vector<char>> board(12, vector<char>(12));
         for (int i = 0; i < N; ++i) {
             Piece p;
             cin >> p.type >> p.r >> p.c;
-            board[p.r][p.c] = p.type;
             if (p.type == 'G') {
-                G_r = p.r, G_c = p.c;
+                G_idx = i;
             }
+            board[p.r][p.c] = p.type;
             pieces.emplace_back(p);
         }
-        if (G(board, r0, c0, G_r, G_c)) {
+        if (G(board, r0, c0, pieces[G_idx].r, pieces[G_idx].c)) {
             cout << "NO" << endl;
             continue;
         }
