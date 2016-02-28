@@ -22,14 +22,14 @@ int main() {
     int n, m, x, y, T = 0;
     char c;
     while (cin >> n >> m) {
-        vector<vector<bool>> H(n + 1, vector<bool>(n + 1));
-        vector<vector<bool>> V(n + 1, vector<bool>(n + 1));
-        for (int i = 1 ; i <= m; ++i) {
+        vector<vector<bool>> H(n, vector<bool>(n));
+        vector<vector<bool>> V(n, vector<bool>(n));
+        for (int i = 0; i < m; ++i) {
             cin >> c >> x >> y;
             if (c == 'H') {
-                H[x][y] = true;
+                H[x - 1][y - 1] = true;
             } else {
-                V[y][x] = true;
+                V[y - 1][x - 1] = true;
             }
         }
         if (T++) {
@@ -40,10 +40,10 @@ int main() {
         }
         cout << "Problem #" << T << endl << endl;
 
-        vector<vector<int>> H_len(n + 1, vector<int>(n + 1));
-        vector<vector<int>> V_len(n + 1, vector<int>(n + 1));
-        for (int i = n - 1; i >= 1; --i) {
-            for (int j = n; j >= 1; --j) {
+        vector<vector<int>> H_len(n, vector<int>(n));
+        vector<vector<int>> V_len(n, vector<int>(n));
+        for (int i = n - 2; i >= 0; --i) {
+            for (int j = n - 1; j >= 0; --j) {
                 if (V[i][j]) {
                     V_len[i][j] = V_len[i + 1][j] + 1;
                 }
@@ -54,10 +54,10 @@ int main() {
         }
 
         int sum = 0;
-        for (int l = 1 ; l <= n; ++l) {
+        for (int l = 1; l <= n; ++l) {
             int count = 0;
-            for (int i = 1; i + l <= n; ++i) {
-                for (int j = 1; j + l <= n; ++j) {
+            for (int i = 0; i + l < n; ++i) {
+                for (int j = 0; j + l < n; ++j) {
                     if (V_len[i][j] >= l &&  V_len[i][j + l] >= l &&
                         H_len[i][j] >= l &&  H_len[i + l][j] >= l) {
                         ++count;
