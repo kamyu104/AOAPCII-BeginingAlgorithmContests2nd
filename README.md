@@ -25,4 +25,4 @@ C++ 11 Solutions of Exercises.
 | # | Title | Solution | Time | Space | Difficulty | Note |
 |---| ----- | -------- | ---- | ----- | ---------- | ---- |
 |4-1|[Xiangqi](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=833&page=show_problem&problem=4464)| [C++](./ch4/Exercises/UVa1589.cpp)| _O(1)_ | _O(1)_ | Easy | Simulate |
-|4-2|[Squares](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=137)| [C++](./ch4/Exercises/UVa201.cpp)| _O(n^4)_ | _O(n^2)_ | Easy | Simulate |
+|4-2|[Squares](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=137)| [C++](./ch4/Exercises/UVa201.cpp)| _O(n^3)_ | _O(n^2)_ | Easy | Simulate |
