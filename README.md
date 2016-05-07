@@ -1,6 +1,6 @@
 # AOAPCII-BeginingAlgorithmContests2nd ![Language](https://img.shields.io/badge/language-C++%2011-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 
-C++ 11 Solutions of Exercises.
+C++ 11 Solutions of AOAPCII Exercises.
 
 * [Arrays and Strings](https://github.com/kamyu104/AOAPCII-BeginingAlgorithmContests2nd#arrays-and-strings)
 * [Functions and Recursion](https://github.com/kamyu104/AOAPCII-BeginingAlgorithmContests2nd#functions-and-recursion)
